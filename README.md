@@ -34,6 +34,7 @@ This document outlines the steps taken to determine the highest number of comple
 
 3. **Finding the Maximum**:
    - Identified the maximum value in the `Rolling_24hr_Trips` column to determine the highest number of completed trips within any 24-hour period.
+   ![image](https://github.com/123manju900/Technanalytics/blob/6bf35c2d326c6d4e786ca712e3e4855529383990/plots/Q1.png)
    ## Outcome
 The highest number of completed trips within a 24-hour period was successfully identified and is **248**.
 
@@ -52,11 +53,12 @@ This document outlines the steps taken to calculate the percentage of all zeroes
      ```
      Percentage of Weekend Zeroes = (Weekend Zeroes / Total Zeroes) * 100
      ```
-
+![image](https://github.com/123manju900/Technanalytics/blob/6bf35c2d326c6d4e786ca712e3e4855529383990/plots/Q2.png)
 ## Results
 - **Total Zeroes**: 1429  
 - **Weekend Zeroes**: 641  
 - **Percentage of Weekend Zeroes**: 44.86%
+
 ## Question 3: Weighted Average Ratio of Completed Trips Per Driver
 
 ### Steps Followed:
@@ -69,6 +71,7 @@ This document outlines the steps taken to calculate the percentage of all zeroes
      Weighted Average Ratio = (Sum of (Completed Trips * Unique Drivers)) / (Sum of Unique Drivers)
      ```
    - This ensures that hours with more drivers are weighted appropriately in the calculation.
+![image](https://github.com/123manju900/Technanalytics/blob/6bf35c2d326c6d4e786ca712e3e4855529383990/plots/Q3.png)
 
 ### Result:
 - **Weighted Average Ratio**: 0.515
@@ -99,6 +102,7 @@ This document outlines the steps taken to calculate the percentage of all zeroes
    - Highlighted specific time periods where:
      - Requests spiked, but driver supply did not increase proportionally.
      - Driver supply exceeded requests.
+   ![image](https://github.com/123manju900/Technanalytics/blob/6bf35c2d326c6d4e786ca712e3e4855529383990/plots/Q5.png)
 
 ### Result:
 - **Answer**: False  
