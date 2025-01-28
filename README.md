@@ -84,6 +84,7 @@ This document outlines the steps taken to calculate the percentage of all zeroes
 
 2. **Identify Busiest Shift**:
    - Compared the total `Unique Requests` across all shifts to find the one with the highest value.
+![image](https://github.com/123manju900/Technanalytics/blob/d8c2d6bd79ec3c6baf5cee828f0651356f85cdaf/plots/Q4.png)
 
 ### Result:
 - **Busiest Shift**: The busiest 8-hour shift is from **4 PM to midnight**, based on unique requests over the two-week period.
@@ -114,6 +115,7 @@ This document outlines the steps taken to calculate the percentage of all zeroes
 
 2. **Identify Maximum Ratio**:
    - Found the maximum ratio and recorded the corresponding start time of the 72-hour period.
+   ![image](https://github.com/123manju900/Technanalytics/blob/d8c2d6bd79ec3c6baf5cee828f0651356f85cdaf/plots/Q6.png)
 
 ### Result:
 - **Answer**: The highest ratio of Zeroes to Eyeballs is `{max_ratio:.2f}`, occurring during the 72-hour period starting at `{max_ratio_time}`.
@@ -131,6 +133,7 @@ This document outlines the steps taken to calculate the percentage of all zeroes
 
 3. **Simulate Adding Drivers**:
    - Simulated adding 5 drivers to this hour daily and recalculated shortages to confirm improvement.
+   ![image](https://github.com/123manju900/Technanalytics/blob/d8c2d6bd79ec3c6baf5cee828f0651356f85cdaf/plots/Q7.png)
 
 ### Result:
 - **Answer**: The best hour to add 5 drivers is **23:00**, with a total shortage of 65 drivers over two weeks.
@@ -145,7 +148,7 @@ This document outlines the steps taken to calculate the percentage of all zeroes
 
 2. **Determine Optimal Hour**:
    - Identified the hour with the maximum cumulative shortage and confirmed it as the best hour for adding drivers daily.
-
+![image](https://github.com/123manju900/Technanalytics/blob/d8c2d6bd79ec3c6baf5cee828f0651356f85cdaf/plots/Q8.png)
 ### Result:
 - **Answer**: The best hour to add 5 drivers is **23:00**, with a total shortage of 65 drivers over two weeks.
 
