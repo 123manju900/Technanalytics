@@ -34,10 +34,124 @@ This document outlines the steps taken to determine the highest number of comple
 
 3. **Finding the Maximum**:
    - Identified the maximum value in the `Rolling_24hr_Trips` column to determine the highest number of completed trips within any 24-hour period.
+   ## Outcome
+The highest number of completed trips within a 24-hour period was successfully identified and is **248**.
+
+# Solution to Question: Percentage of Zeroes Occurring on Weekends
+
+This document outlines the steps taken to calculate the percentage of all zeroes during the two-week period that occurred on weekends (defined as Friday at 5 PM to Sunday at 3 AM). 
+
+## Steps Followed
+
+1. **Filter Weekend Data**:
+   - Extracted rows where the `Datetime` falls between Friday at 5 PM and Sunday at 3 AM for each week in the dataset.
+   - Counted the number of zeroes (`Weekend Zeroes`) in this filtered weekend data.
+
+**Calculate Percentage**:
+   - Computed the percentage of weekend zeroes using the formula:
+     ```
+     Percentage of Weekend Zeroes = (Weekend Zeroes / Total Zeroes) * 100
+     ```
+
+## Results
+- **Total Zeroes**: 1429  
+- **Weekend Zeroes**: 641  
+- **Percentage of Weekend Zeroes**: 44.86%
+## Question 3: Weighted Average Ratio of Completed Trips Per Driver
+
+### Steps Followed:
+1. **Calculate Total Trips and Drivers**:
+   - Aggregated the total number of `Completed Trips` and `Unique Drivers` for each hour over the two-week period.
+   
+2. **Compute Weighted Average**:
+   - Used the formula:
+     ```
+     Weighted Average Ratio = (Sum of (Completed Trips * Unique Drivers)) / (Sum of Unique Drivers)
+     ```
+   - This ensures that hours with more drivers are weighted appropriately in the calculation.
+
+### Result:
+- **Weighted Average Ratio**: 0.515
+
+---
+
+## Question 4: Busiest 8-Hour Shift Based on Unique Requests
+
+### Steps Followed:
+1. **Aggregate Data into 8-Hour Shifts**:
+   - Divided the dataset into consecutive, non-overlapping 8-hour shifts starting at midnight, 8 AM, and 4 PM each day.
+   - Calculated the total `Unique Requests` for each shift.
+
+2. **Identify Busiest Shift**:
+   - Compared the total `Unique Requests` across all shifts to find the one with the highest value.
+
+### Result:
+- **Busiest Shift**: The busiest 8-hour shift is from **4 PM to midnight**, based on unique requests over the two-week period.
+## Question 5: True or False - Driver Supply Always Increases When Demand Increases?
+
+### Steps Followed:
+1. **Visualize Supply vs. Demand**:
+   - Plotted a time-series graph comparing `Unique Requests` (demand) and `Driver Supply` over the two-week period.
+   - Analyzed trends to identify instances where supply did not increase with demand.
+
+2. **Identify Exceptions**:
+   - Highlighted specific time periods where:
+     - Requests spiked, but driver supply did not increase proportionally.
+     - Driver supply exceeded requests.
+
+### Result:
+- **Answer**: False  
+  There were instances, such as on **11th September**, where driver supply was higher than requests, and times when requests spiked but supply did not increase proportionally.
+
+---
+
+## Question 6: In Which 72-Hour Period is the Ratio of Zeroes to Eyeballs the Highest?
+
+### Steps Followed:
+1. **Calculate Ratios for Rolling 72-Hour Periods**:
+   - Used a rolling window of 72 hours to compute the ratio of `Zeroes` (unsuccessful requests) to `Eyeballs` (total requests).
+   - Stored the ratio for each rolling period.
+
+2. **Identify Maximum Ratio**:
+   - Found the maximum ratio and recorded the corresponding start time of the 72-hour period.
+
+### Result:
+- **Answer**: The highest ratio of Zeroes to Eyeballs is `{max_ratio:.2f}`, occurring during the 72-hour period starting at `{max_ratio_time}`.
+
+---
+
+## Question 7: If You Could Add 5 Drivers to Any Single Hour of Every Day, Which Hour Should You Add Them To?
+
+### Steps Followed:
+1. **Calculate Driver Shortages**:
+   - For each hour of the day, calculated the total shortage of drivers (i.e., `Unique Requests` minus `Driver Supply`) over the two-week period.
+
+2. **Identify Hour with Maximum Shortage**:
+   - Found the hour with the highest cumulative shortage across all days.
+
+3. **Simulate Adding Drivers**:
+   - Simulated adding 5 drivers to this hour daily and recalculated shortages to confirm improvement.
+
+### Result:
+- **Answer**: The best hour to add 5 drivers is **23:00**, with a total shortage of 65 drivers over two weeks.
+
+---
+
+## Question 8: Best Hour to Add Drivers Based on Total Shortage
+
+### Steps Followed:
+1. **Analyze Hourly Shortages**:
+   - Similar to Question 7, analyzed hourly shortages across all days during the two-week period.
+
+2. **Determine Optimal Hour**:
+   - Identified the hour with the maximum cumulative shortage and confirmed it as the best hour for adding drivers daily.
+
+### Result:
+- **Answer**: The best hour to add 5 drivers is **23:00**, with a total shortage of 65 drivers over two weeks.
+
 
 4. **Result Extraction**:
    - Extracted the corresponding time period and value for reporting purposes.
 
-## Outcome
-The highest number of completed trips within a 24-hour period was successfully identified and is **248**. 
+ 
 
